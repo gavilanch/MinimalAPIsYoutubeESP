@@ -1,0 +1,49 @@
+@MinimalAPIsParaYoutube_HostAddress = http://localhost:5283
+
+### WeatherForecast
+
+GET {{MinimalAPIsParaYoutube_HostAddress}}/weatherforecast/
+Accept: application/json
+
+### Ejemplo appsettings - mensaje
+
+GET {{MinimalAPIsParaYoutube_HostAddress}}/mensaje/
+Accept: application/json
+
+### Persona - Obtener todas
+
+GET {{MinimalAPIsParaYoutube_HostAddress}}/personas
+Accept: application/json
+
+### Persona - Obtener por id - Existe
+
+GET {{MinimalAPIsParaYoutube_HostAddress}}/personas/2
+Accept: application/json
+
+### Persona - Obtener por id - No Existe
+
+GET {{MinimalAPIsParaYoutube_HostAddress}}/personas/-1
+Accept: application/json
+
+### Persona - Crear
+
+POST {{MinimalAPIsParaYoutube_HostAddress}}/personas/
+Content-Type: application/json
+
+{
+    "nombre": "Laura"
+}
+
+### Persona - Actualizar
+
+PUT {{MinimalAPIsParaYoutube_HostAddress}}/personas/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nombre": "Felipe Actualizado"
+}
+
+### Persona - Borrar
+
+DELETE {{MinimalAPIsParaYoutube_HostAddress}}/personas/-1
